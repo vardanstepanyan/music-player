@@ -1,0 +1,25 @@
+.menu-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 5px;
+
+  background: rgb(3, 3, 4);
+  background: linear-gradient(
+    180deg,
+    rgba(3, 3, 4, 1) 0%,
+    rgba(89, 89, 89, 0.49360994397759106) 0%,
+    rgba(148, 148, 148, 1) 100%
+  );
+}
+
+.menu-container-left {
+  display: flex;
+}
+
+.menu-container-right {
+  display: flex;
+  align-items: center;
+}

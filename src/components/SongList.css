@@ -1,0 +1,34 @@
+.songs-table {
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border-bottom: 1px solid #c4c4c4;
+}
+
+tH {
+  border-right: 1px solid #fff !important;
+}
+
+th {
+  padding: 10px 100px 10px 5px;
+}
+
+.play-button-cell {
+  padding: 0 40px 0 0;
+  margin: auto;
+}
+
+.track-cell {
+  padding: 0 60px 0 5px;
+}
+
+.titles-row {
+  background-color: #c4c4c4;
+}
+
+.table-body {
+  background-color: #dedede;
+}

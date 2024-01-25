@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, createContext } from "react";
+
+import Menu from "./components/Menu";
+import SongList from "./components/SongList";
+import SongRow from "./components/SongRow";
+import MusicUploadForm from "./components/MusicUploadForm";
+
+import "./App.css";
+
+export const MusicContext = createContext();
 
 function App() {
+  //Using use state with already updated music
+  const [songs, setSongs] = useState([
+    { songName: "Yamakasi", artistName: "Miyagi & Эндшпиль" },
+    { songName: "Minor", artistName: "Miyagi & Эндшпиль" },
+    { songName: "All The Time", artistName: "Miyagi & Эндшпиль" },
+    { songName: "I Got Love", artistName: "Miyagi & Эндшпиль" },
+    { songName: "Silhouette", artistName: "Miyagi & Эндшпиль" },
+    { songName: "Captain", artistName: "Miyagi" },
+    { songName: "Narrative", artistName: "Miyagi & Эндшпиль" },
+  ]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MusicContext.Provider value={{ songs, setSongs }}>
+        <Menu />
+        <SongList />
+        <SongRow />
+        <MusicUploadForm />
+      </MusicContext.Provider>
     </div>
   );
 }

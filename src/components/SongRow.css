@@ -1,0 +1,10 @@
+td {
+  padding: 5px 0;
+}
+
+.song-row-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+}
